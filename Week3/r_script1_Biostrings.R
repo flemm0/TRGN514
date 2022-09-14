@@ -1,7 +1,5 @@
-# Setting working directory
 setwd("~/Desktop/TRGN514/RStuff/Week3")
 
-#### Installation
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
@@ -9,7 +7,7 @@ BiocManager::install("Biostrings")
 
 browseVignettes("Biostrings")
 
-# Biostrings is an R package for analyzing and manipulating strings, it creates special objects for DNA, RNA, or Amino Acid strings which are treated differently than regular strings/characters in R, and they have associated methods with them.
+# Biostrings is an R package for analyzing and manipulating strings, it creates special objects for DNA, RNA, or Amino Acid strings which are treated differently than regular strings/characters in R.
 
 
 # Load library
@@ -86,8 +84,8 @@ pa <- pairwiseAlignment(pattern=pattern, subject=subject)
 pa
 # Print summary statistics on the alignment
 summary(pa)
-mismatchTable(pa)
-
 
 # Search for specific pattern in a DNAString
 vmatchPattern(pattern=DNAString("AAT"), subject=pattern)
+
+# Overall, the XStrings objects in Biostrings makes it more efficient to work with long biological character strings in R as opposed to doing the same with base R functions.

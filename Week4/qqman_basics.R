@@ -54,3 +54,16 @@ manhattan(gwasResults, highlight = snpsOfInterest)
 manhattan(gwasResults, annotatePval = 0.01) #labels top SNP per chromosome that exceeds p-value threshold (default action)
 
 manhattan(gwasResults, annotatePval = 0.005, annotateTop = FALSE) #excludes top SNP on each chromosome
+
+
+#### Combining pdfs ####
+install.packages("qpdf")
+
+qpdf::pdf_combine(input = c("~/Desktop/TRGN514/RStuff/Week4/plot1.pdf", 
+                            "~/Desktop/TRGN514/RStuff/Week4/plot2.pdf", 
+                            "~/Desktop/TRGN514/RStuff/Week4/plot3.pdf", 
+                            "~/Desktop/TRGN514/RStuff/Week4/plot4.pdf", 
+                            "~/Desktop/TRGN514/RStuff/Week4/plot5.pdf", 
+                            "~/Desktop/TRGN514/RStuff/Week4/plot6.pdf", 
+                            "~/Desktop/TRGN514/RStuff/Week4/plot7.pdf"),
+                  output = "~/Desktop/TRGN514/RStuff/Week4/all_plots.pdf")

@@ -27,8 +27,12 @@ manhattan(SCZ,
           cex = 0.35,
           main = "PGC SCZ GWAS")
 
-manhattan(subset(SCZ, CHR == 3),
+manhattan(subset(SCZ, CHR == 6),
           suggestiveline = FALSE,
           genomewideline = -log10(4.915e-09),
           cex = 0.35,
-          main = " PGC_SCZ_GWAS_chr3")
+          main = " PGC SCZ GWAS Chr 6")
+
+
+# citation
+#Turner, (2018). qqman: an R package for visualizing GWAS results using Q-Q and manhattan plots. Journal of Open Source Software, 3(25), 731, https://doi.org/10.21105/joss.00731.

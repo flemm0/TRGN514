@@ -50,11 +50,11 @@ laml
 
 #Plot MAF summary
 plot.new()
-plotmafSummary(maf = laml, rmOutlier = TRUE, addStat = "median", dashboard = TRUE)
+plotmafSummary(maf = laml, rmOutlier = TRUE, addStat = "median", dashboard = TRUE, titvRaw = FALSE)
 
 #Draw oncoplots
 plot.new()
-oncoplot(maf = laml, top = 15, fontSize = 0.6)
+oncoplot(maf = laml, top = 15, fontSize = 0.6, legendFontSize = 0.8)
 
 #Create protein plots
 plotProtein(gene = "BPIFC", legendTxtSize = 0.05)

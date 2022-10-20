@@ -66,6 +66,13 @@ plot(hclust.complete.eucl, labels = FALSE, main = "Euclidian - Complete")
 plot(hclust.complete.cor, labels = FALSE, main = "Pearson's - Complete")
 
 # plot colored dendrograms
+fviz_dend(hclust.ward.eucl, k = 3,
+          labels = FALSE,
+          k_colors = c("#2E9FDF", "#E7B800", "#FC4E07"),
+          color_labels_by_k = TRUE,
+          rect = TRUE)
+
+
 fviz_dend(hclust.ward.eucl, k = 4,
           labels = FALSE,
           k_colors = c("#FCFF74", "#74E4FF", "#74FF7F", "#EAFF74"),

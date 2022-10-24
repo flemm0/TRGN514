@@ -5,6 +5,7 @@ Week3/*.py
 Week4/plot*.pdf
 Week5/*.hq2*
 Week5/.RDataTmp
+Week5/README.Rmd
 Week8/*data
 Week9/README.Rmd
 Week9/README_cache

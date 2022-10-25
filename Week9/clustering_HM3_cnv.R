@@ -75,6 +75,6 @@ fviz_dend(hclust.ward.eucl, k = 3,
 
 fviz_dend(hclust.ward.eucl, k = 4,
           labels = FALSE,
-          k_colors = c("#FCFF74", "#74E4FF", "#74FF7F", "#EAFF74"),
+          k_colors = c("#FF4040", "#74E4FF", "#74FF7F", "#EAFF74"),
           color_labels_by_k = TRUE,
           rect = TRUE)

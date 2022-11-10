@@ -39,11 +39,11 @@ ln -s ERR030887_M37_Liver.proj.accepted_hits.bam.bai Liver.bai
 
 # run samtools idxstats on the 5 sets of files
 
-samtools idxstats Adipose > Adipose.idxstats
-samtools idxstats Breast > Breast.idxstats
-samtools idxstats Colon > Colon.idxstats
-samtools idxstats Brain > Brain.idxstats
-samtools idxstats Liver > Liver.idxstats
+samtools idxstats Adipose > Adipose.idxstats && \
+samtools idxstats Breast > Breast.idxstats && \
+samtools idxstats Colon > Colon.idxstats && \
+samtools idxstats Brain > Brain.idxstats && \
+samtools idxstats Liver > Liver.idxstats &
 
 
 ### idxstats columns are 1: ref sequence name, 2: chromosome size, 3: # of mapped reads, 4: # of unmapped reads
@@ -56,3 +56,10 @@ paste Adipose.idxstats Breast.idxstats Colon.idxstats Brain.idxstats Liver.idxst
 ## :%!column -t
 ## save: :wq
 
+# run samtools flagstat on selected .bam files
+
+samtools flagstat Adipose > Adipose.flagstat && \
+samtools flagstat Breast > Breast.flagstat && \
+samtools flagstat Colon > Colon.flagstat && \
+samtools flagstat Brain > Brain.flagstat && \
+samtools flagstat Liver > Liver.flagstat &

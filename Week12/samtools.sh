@@ -63,3 +63,9 @@ samtools flagstat Breast > Breast.flagstat && \
 samtools flagstat Colon > Colon.flagstat && \
 samtools flagstat Brain > Brain.flagstat && \
 samtools flagstat Liver > Liver.flagstat &
+
+
+# samtools merge adipose and breast bam files, as well as liver and brain bam files
+
+nohup samtools merge Adipose_Breast.merged.bam Adipose Breast &
+nohup samtools merge Liver_Brain.merged.bam Liver Brain &

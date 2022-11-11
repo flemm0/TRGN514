@@ -74,3 +74,7 @@ for file in *.flagstat; do echo "$file"; egrep "[0-9]+\s[+]\s[0-9]\smapped" "$fi
 nohup samtools merge Adipose_Breast.merged.bam Adipose Breast &
 nohup samtools merge Liver_Brain.merged.bam Liver Brain &
 
+# finally, create index files for the merged bam files
+
+nohup samtools index Adipose_Breast.merged.bam &
+nohup samtools index Liver_Brain.merged.bam &

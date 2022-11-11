@@ -64,8 +64,13 @@ samtools flagstat Colon > Colon.flagstat && \
 samtools flagstat Brain > Brain.flagstat && \
 samtools flagstat Liver > Liver.flagstat &
 
+# get the number of total mapped reads and the number of reads whose mate mapped to a different chromosome
+
+for file in *.flagstat; do echo "$file"; egrep "[0-9]+\s[+]\s[0-9]\smapped" "$file"; egrep "with mate mapped to a different chr$" "$file"; done
+
 
 # samtools merge adipose and breast bam files, as well as liver and brain bam files
 
 nohup samtools merge Adipose_Breast.merged.bam Adipose Breast &
 nohup samtools merge Liver_Brain.merged.bam Liver Brain &
+
